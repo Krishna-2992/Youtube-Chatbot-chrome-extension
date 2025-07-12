@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>YouTube AI Assistant</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="header-content">
+          <div class="logo">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L2 7L12 12L22 7L12 2Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 17L12 22L22 17"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 12L12 17L22 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>YouTube AI</span>
+          </div>
+          <div class="video-info" id="videoInfo">
+            <span class="video-indicator">🎥</span>
+            <span id="videoTitle">Loading...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Container -->
+      <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot-message">
+            <div class="message-avatar">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8 14s1.5 2 4 2 4-2 4-2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="9"
+                  y1="9"
+                  x2="9.01"
+                  y2="9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="15"
+                  y1="9"
+                  x2="15.01"
+                  y2="9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="message-content">
+              <div class="message-text">
+                Hello! I'm your YouTube AI assistant. I can help you understand
+                this video better. What would you like to know?
+              </div>
+              <div class="message-time">Just now</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div
+          class="typing-indicator"
+          id="typingIndicator"
+          style="display: none"
+        >
+          <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="typing-text">AI is thinking...</span>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+        <div class="input-container">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Ask me anything about this video..."
+            maxlength="500"
+          />
+          <button id="sendButton" class="send-button">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="22"
+                y1="2"
+                x2="11"
+                y2="13"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <polygon points="22,2 15,22 11,13 2,9" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+        <div class="quick-actions">
+          <button class="quick-button" data-message="Summarize this video">
+            📝 Summarize
+          </button>
+          <button class="quick-button" data-message="What are the key points?">
+            🔑 Key Points
+          </button>
+          <button class="quick-button" data-message="Explain the main topic">
+            💡 Explain
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
